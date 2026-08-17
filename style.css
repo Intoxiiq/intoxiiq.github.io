@@ -1,0 +1,388 @@
+/* ============================================
+   EQUANS Patchnotes - Style global
+   ============================================ */
+
+/* ---------- Variables & thèmes ---------- */
+:root {
+    /* Couleurs EQUANS - Primary */
+    --equans-green: #70BD95;
+    --equans-dark: #002439;
+    --equans-white: #FFFFFF;
+
+    /* Couleurs EQUANS - Secondary */
+    --equans-blue: #0059CE;
+    --equans-orange: #FF9600;
+    --equans-yellow: #FFCA00;
+    --equans-lime: #76C512;
+    --equans-purple: #C865FF;
+    --equans-pink: #FF0080;
+    --equans-neon: #B7F100;
+    --equans-cyan: #00DEE8;
+
+    /* Thème clair (défaut) */
+    --bg: #f5f7fa;
+    --fg: #1a1a1a;
+    --surface: #ffffff;
+    --surface-hover: #f0f4f8;
+    --border: #d9e2ec;
+    --muted: #627d98;
+    --accent: var(--equans-blue);
+    --accent-bg: #e7f0ff;
+    --header-bg: var(--equans-dark);
+    --header-fg: var(--equans-white);
+    --card-shadow: 0 2px 8px rgba(0, 36, 57, 0.08);
+    --card-shadow-hover: 0 6px 20px rgba(0, 36, 57, 0.15);
+    --tag-bg: #eef2f7;
+    --tag-fg: #334e68;
+
+    tab-size: 4;
+    -moz-tab-size: 4;
+}
+
+html.dark {
+    /* Thème sombre */
+    --bg: #0b0f14;
+    --fg: #e5e7eb;
+    --surface: #111827;
+    --surface-hover: #1a2332;
+    --border: #1f2937;
+    --muted: #9ca3af;
+    --accent: #60a5fa;
+    --accent-bg: #0b223d;
+    --header-bg: #0a1a2e;
+    --header-fg: #e5e7eb;
+    --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --card-shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.5);
+    --tag-bg: #1f2937;
+    --tag-fg: #9ca3af;
+}
+
+/* ---------- Base ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--fg);
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ---------- Bandeau / Header ---------- */
+.header {
+    background: var(--header-bg);
+    color: var(--header-fg);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background 0.3s ease;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.header-logo {
+    height: 40px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+}
+
+.header-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--header-fg);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* ---------- Bouton toggle mode sombre ---------- */
+.theme-toggle {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--header-fg);
+    border-radius: 8px;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ---------- Lien retour accueil ---------- */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    margin: 1.2rem 2rem 0;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: var(--equans-green);
+    text-decoration: underline;
+}
+
+/* ---------- Contenu principal ---------- */
+.main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 3rem;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: var(--fg);
+}
+
+h2 {
+    color: var(--fg);
+}
+
+h3 {
+    color: var(--fg);
+    margin-top: 1.2rem;
+}
+
+p {
+    color: var(--fg);
+}
+
+.version-info {
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+}
+
+.version-info strong {
+    color: var(--accent);
+}
+
+/* ---------- Détails / Accordéon ---------- */
+details {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: 10px;
+    margin: 1rem 0;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+details:hover {
+    border-color: var(--equans-green);
+    box-shadow: var(--card-shadow-hover);
+}
+
+summary {
+    cursor: pointer;
+    padding: 1rem 1.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    list-style: none;
+    user-select: none;
+    color: var(--fg);
+    transition: background 0.2s ease;
+}
+
+summary:hover {
+    background: var(--surface-hover);
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.chevron {
+    display: inline-block;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+    color: var(--accent);
+    font-size: 0.8em;
+}
+
+details[open] .chevron {
+    transform: rotate(90deg);
+}
+
+.content {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--border);
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+ul {
+    padding-left: 1.4rem;
+    margin-top: 0.25rem;
+}
+
+ul.tabbed {
+    padding-left: 80px;
+}
+
+li {
+    margin-bottom: 0.3rem;
+}
+
+code {
+    background: var(--accent-bg);
+    padding: 0.15rem 0.35rem;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    font-size: 0.9em;
+    color: var(--fg);
+}
+
+/* ---------- Page d'accueil : cartes ---------- */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.card {
+    display: block;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.2rem 1.4rem;
+    text-decoration: none;
+    color: var(--fg);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--card-accent, var(--equans-green));
+    transition: height 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--card-shadow-hover);
+    border-color: var(--card-accent, var(--equans-green));
+}
+
+.card:hover::before {
+    height: 6px;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0.5rem 0 0.3rem;
+    color: var(--fg);
+}
+
+.card-version {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin: 0;
+}
+
+.card-version strong {
+    color: var(--accent);
+}
+
+.card-arrow {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.2rem;
+    color: var(--muted);
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.card:hover .card-arrow {
+    transform: translateX(4px);
+    color: var(--card-accent, var(--equans-green));
+}
+
+/* Accents de couleur par carte */
+.card-accent-green { --card-accent: var(--equans-green); }
+.card-accent-blue { --card-accent: var(--equans-blue); }
+.card-accent-orange { --card-accent: var(--equans-orange); }
+.card-accent-yellow { --card-accent: var(--equans-yellow); }
+.card-accent-lime { --card-accent: var(--equans-lime); }
+.card-accent-purple { --card-accent: var(--equans-purple); }
+.card-accent-pink { --card-accent: var(--equans-pink); }
+.card-accent-neon { --card-accent: var(--equans-neon); }
+.card-accent-cyan { --card-accent: var(--equans-cyan); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+    .header {
+        padding: 0.8rem 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .header-logo {
+        height: 32px;
+    }
+
+    .main {
+        padding: 1rem 1rem 2rem;
+    }
+
+    .back-link {
+        margin: 1rem 1rem 0;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}

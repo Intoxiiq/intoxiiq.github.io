@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Patchnotes EQUANS</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        try {
+            if (localStorage.getItem('equans-theme') === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+        } catch (e) {
+            // Ignoré : localStorage bloqué (iframe sandbox SharePoint)
+        }
+    </script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-left">
+        <img src="Logo_Axima_Concept_Equans.png" alt="Logo EQUANS" class="header-logo">
+        <h1 class="header-title">Patchnotes</h1>
+    </div>
+    <div class="header-right">
+        <button class="theme-toggle" type="button">🌙 Mode sombre</button>
+    </div>
+</header>
+
+<main class="main">
+    <h1>Notes de version</h1>
+    <p class="version-info">Sélectionnez une application pour consulter ses notes de version.</p>
+
+    <div class="cards-grid">
+
+        <a href="patchnotes_co_tqf.html" class="card card-accent-green">
+            <span class="card-arrow">→</span>
+            <h2 class="card-title">CO-TQF / FM</h2>
+            <p class="card-version">Version <strong>0.5.3</strong> — 26/06/2026</p>
+        </a>
+
+        <a href="patchnotes_gdt.html" class="card card-accent-blue">
+            <span class="card-arrow">→</span>
+            <h2 class="card-title">Gestion des Temps</h2>
+            <p class="card-version">Version <strong>1.9.2</strong> — 26/06/2026</p>
+        </a>
+
+        <a href="patchnotes_gestima_nm.html" class="card card-accent-orange">
+            <span class="card-arrow">→</span>
+            <h2 class="card-title">Gestima → Nomenclatures</h2>
+            <p class="card-version">Version <strong>0.4</strong> — 22/04/2026</p>
+        </a>
+
+        <a href="patchnotes_gestima_PBI.html" class="card card-accent-purple">
+            <span class="card-arrow">→</span>
+            <h2 class="card-title">Gestima Power BI</h2>
+            <p class="card-version">Version <strong>0.1</strong> — xx/xx/xxxx</p>
+        </a>
+
+        <a href="patchnotes_PA_import_ged.html" class="card card-accent-cyan">
+            <span class="card-arrow">→</span>
+            <h2 class="card-title">Power Automate - Import GED</h2>
+            <p class="card-version">Version <strong>x.x</strong> — xx/xx/xxxx</p>
+        </a>
+
+        <a href="patchnotes_sharepoint_GC.html" class="card card-accent-pink">
+            <span class="card-arrow">→</span>
+            <h2 class="card-title">SharePoint GC</h2>
+            <p class="card-version">Version <strong>0.1</strong> — xx/xx/xxxx</p>
+        </a>
+
+    </div>
+</main>
+
+</body>
+</html>

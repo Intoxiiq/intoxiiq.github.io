@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CO-TQF / FM - Patchnotes</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        try {
+            if (localStorage.getItem('equans-theme') === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+        } catch (e) {
+            // Ignoré : localStorage bloqué (iframe sandbox SharePoint)
+        }
+    </script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-left">
+        <img src="Logo_Axima_Concept_Equans.png" alt="Logo EQUANS" class="header-logo">
+        <h1 class="header-title">CO-TQF / FM</h1>
+    </div>
+    <div class="header-right">
+        <button class="theme-toggle" type="button">🌙 Mode sombre</button>
+    </div>
+</header>
+
+<a href="index.html" class="back-link">← Retour à l'accueil</a>
+
+<main class="main">
+<h1>Notes de version</h1>
+<p class="version-info">Version actuelle : <strong>0.5.3</strong> — Publication : 26/06/2026</p>
+
+<!-- ========================= VERSION 0.5.3 - 26/06/2026 ========================= -->
+<details open>
+    <summary><span class="chevron">▸</span>VERSION 0.5.3 - 26/06/2026</summary>
+    <div class="content">
+        <p>Version PowerApps 276 (3.26063.9)</p>
+        <h3>🔧Modifications</h3>
+        <ul>
+			<li>La couleur d'arrière plan de la création d'une action déjà existante dans la BDD est désormais rouge.</li>
+			<li>La couleur s'update avec une sauvegarde (et non pas à la modification dans le tableau)</li>
+			<li>La couleur ne change pas si il y a 2 fois le même élément dans le tableau</li>
+			<li>Debug du FMO ne se montrant pas dans la liste COR-TQF-FMO alors qu'on triait dessus</li>
+			<li>Modification d'UI pour la taille des conteneurs des listes/tableaux</li>
+			<li>Debug du choix des favoris dans la création d'actions</li>
+        </ul>
+    </div>
+</details>
+
+<!-- ========================= VERSION 0.5.2 - 23/06/2026 ========================= -->
+<details>
+    <summary><span class="chevron">▸</span>VERSION 0.5.2 - 23/06/2026</summary>
+    <div class="content">
+        <p>Version PowerApps 271 (3.26062.6)</p>
+        <h3>🔧Modifications</h3>
+        <ul>
+			<li>Debug suite à une modification de base de données EQUANS sur les noms-prénoms-gaia</li>
+			<li>Les thèmes sont désormais fonctionnel en tous états</li>
+			<li>Le thème favori de l'application est désormais sauvegardé et n'est plus le même que celui de la gestion des temps</li>
+			<li>Le thème de base est désormais clair</li>
+        </ul>
+
+        <h3>➕Ajouts</h3>
+        <ul>
+			<li>Ajout d'un écran de chargement avec des statuts</li>
+        </ul>
+    </div>
+</details>
+
+<!-- ========================= VERSION 0.5.1b - 01/06/2026 - The GOAT Bourrigan Patch========================= -->
+<details>
+    <summary><span class="chevron">▸</span>VERSION 0.5.1b - 02/06/2026</summary>
+	<p><i>Version finale suite découverte d'un bug lors de la maj 0.5.1</i></p>
+    <div class="content">
+        <p>Version PowerApps 256 (3.26053.13)</p>
+        <h3>🔧Modifications</h3>
+        <ul>
+			<li>Gain de place pour les cases à cocher</li>
+			<li>Couleur du bandeau rouge quand la dernière version n'est pas installée</li>
+			<li>Ajout d'un bouton pour lire la patchnote locale (écrasée à chaque version différente)</li>
+			<li>Suppression du compteur d'actions pour les TQF afin de gagner de la mémoire</li>
+        </ul>
+
+        <h3>➕Ajouts</h3>
+        <ul>
+			<li>Ajout de vérification des COR-TQF-FMO sans métiers avec case à cocher</li>
+			<li>Les pilotes sont désormais automatiquement mis lors de l'import de la ligne, si et seulement si le document a été intégré à la GED (donc hors statut PRO)</li>
+			<li>Ajout d'une fenetre de patchnote, qui se retire si validée</li>
+			<li>Ajout d'une liste des vesrions des applis</li>
+			<li>Ajout d'une liste des dernières versions lues par les utilisateurs afin de montrer ou non la patchnote de la version actuelle</li>
+			<li>Métier "SAFETY" désormais disponible</li>
+        </ul>
+    </div>
+</details>
+
+<!-- ========================= VERSION 0.5.1a - 01/06/2026 ========================= -->
+<details>
+    <summary><span class="chevron">▸</span>VERSION 0.5.1a - 01/06/2026</summary>
+	<p><i>Version temporaire suite découverte d'un bug lors de la maj 0.5.1</i></p>
+    <div class="content">
+        <p>Version PowerApps 236 (3.26053.13)</p>
+        <h3>Modifications</h3>
+        <ul>
+			<li>Déplacement de la feuille TQF en 1ère place</li>
+			<li>"Uniquement" ajouté pour les cases à cocher</li>
+			<li>Debug d'un problème de filtre sur état dans COR-TQF-FMO</li>
+        </ul>
+
+        <h3>Ajouts</h3>
+        <ul>
+			<li>Mise en place d'un bouton pour ouvrir excel directement sur le bureau (test). La fonction web reste disponible.</li>
+        </ul>
+    </div>
+</details>
+
+<!-- ========================= VERSION 0.5 - 22/05/2026 ========================= -->
+<details>
+    <summary><span class="chevron">▸</span>VERSION 0.5 - 22/05/2026</summary>
+    <div class="content">
+        <p>Version PowerApps 227 (3.26052.14)</p>
+        <h3>Modifications</h3>
+        <ul>
+			<li>Modification de l'UI dans l'onglet CO-TQF-FM</li>
+			<li>Correction d'un bug au niveau de l'état de la TQF pouvant supprimer l'état et ne pas bien montrer le bouton de sauvegarde</li>
+			<li>Les CO-TQF-FM sont classés par n° chrono (donc par batiment), plutot qu'aléatoirement</li>
+			<li>Cela mélange aussi les TQF de la CP dedans car leur chrono est a 5 et non 6 chiffres</li>
+			<li>Modifications des CO en COR car il s'agit du vrai trigramme GED</li>
+			<li>Pilotes ungrouped sur l'Excel (ils étaient groupés avec le lien GED)</li>
+			<li>Quelques modifications de couleurs à cause de problèmes de thèmes</li>
+        </ul>
+
+        <h3>Ajouts</h3>
+        <ul>
+			<li>Ajout de la colonne métier, permettant de choisir plusieurs métiers pour une TQF</li>
+			<li>Cette colonne apparait aussi dans l'excel</li>
+			<li>Les métiers existant sont HVAC, EIC et Mockup.</li>
+			<li>Il est impossible d'enregistrer un élément si le métier est vide</li>
+			<li>L'ordre est toujours "EIC, HVAC, Mockup". Aucun besoin de rentrer dans cet ordre, le tri se fait tout seul</li>
+			<li>Impossible de trier dans l'application. Le tri est disponible uniquement dans l'Excel</li>
+			<li>Idem pour FM qui devient FMO</li>
+        </ul>
+
+    </div>
+</details>
+
+<!-- ========================= VERSION 0.4.1 — 05/05/2026 ========================= -->
+<details>
+    <summary><span class="chevron">▸</span>VERSION 0.4.1 — 05/05/2026</summary>
+    <div class="content">
+        <p>Version PowerApps 217 (3.26044.14)</p>
+        <h3>Modifications</h3>
+        <ul>
+			<li>Liste des états CO-TQF-FM agrandie de 1 élément (Cloturée - COR-FM)</li>
+        </ul>
+
+        <h3>Ajouts</h3>
+        <ul>
+			<li>La liste des états des CO-TQF est désormais dans la liste "A13 - Statuts CO-TQF-FM"</li>
+        </ul>
+
+    </div>
+</details>
+
+<!-- ========================= VERSION 0.4 — 29/04/2026 ========================= -->
+<details>
+    <summary><span class="chevron">▸</span>VERSION 0.4 — 29/04/2026</summary>
+    <div class="content">
+        <p>Version PowerApps 214 (3.26043.17)</p>
+        <h3>Modifications</h3>
+        <ul>
+			<li>Les boutons "Sauvegarde" et "Annulé" sont replacés dans l'onglet Actions</li>
+			<li>Date cible retirée. Dans la BDD, la date n'existe plus, la métadonnée SharePoint sera utilisée à sa place (date de création de la ligne de données)</li>
+			<li>Gain de place pour ajouter la nouvelle colonne DOC MAJ</li>
+			<li>La recherche du livrable MAJ est possible uniquement sur le même livrable impacté. Seuls les indices peuvent changer</li>
+			<li>Suppression des couleurs dans l'onglet actions car pas nécessaire et trop gourmand</li>
+			<li>Quelques modifications de titres</li>
+			<li>Suppression d'éléments d'UI perturbateurs suite à cette màj</li>
+			<li>Modification du titre de l'application</li>
+			<li>Modification de l'icone de l'application</li>
+        </ul>
+
+        <h3>Ajouts</h3>
+        <ul>
+			<li>Les changements d'actions sont désormais sauvegardés dans une base de données</li>
+			<li>La création des actions est aussi enregistrée dans une autre base de données pour historisation des modifications</li>
+			<li>L'historique des FM est désormais sauvegardé</li>
+			<li>Ajout du mode sombre, disponible sur l'onglet CO-TQF-FM. Il est identique a celui de la gestion de temps, et prend votre préférence de base.</li>
+        </ul>
+    </div>
+</details>
+
+<!-- ========================= VERSION 0.3.1 — 21/04/2026 ========================= -->
+<details>
+    <summary><span class="chevron">▸</span>VERSION 0.3.1 — 21/04/2026</summary>
+    <div class="content">
+        <p>Version PowerApps 182 (3.26041.15)</p>
+        <h3>Modifications</h3>
+        <ul>
+            <li>Les liens GED pour les CO-TQF sont désormais présent dans la BDD</li>
+            <li>Il est possible de cliquer sur un bouton pour acceder au lien GED CO-TQF</li>
+			<li>Quelques modifications de tooltip</li>
+        </ul>
+    </div>
+</details>
+
+<!-- ========================= VERSION 0.3 — 20/04/2026 ========================= -->
+<details>
+    <summary><span class="chevron">▸</span>VERSION 0.3 — 20/04/2026</summary>
+    <div class="content">
+        <p>Version PowerApps 178 (3.26041.15)</p>
+        <h3>Modifications</h3>
+        <ul>
+            <li>La création d'actions est + simple, mais nécessite une sauvegarde avant tout envoi dans la BDD</li>
+            <li>La page d'arrivée est désormais la page des CO-TQF-FM</li>
+            <li>Les éléments périmés apparaissent car le filtrage automatique engendrait des bugs</li>
+			<li>Suppression du bouton pour cacher/montrer l'onglet filtre sur CO-TQF-FM</li>
+			<li>Suppression du bouton import car désormais impossible de le faire selon la configuration actuelle</li>
+			<li>Quelques modifications de texte</li>
+        </ul>
+
+        <h3>Ajouts</h3>
+        <ul>
+			<li>Ajout des FM dans la base de données. Tous ce qui est CO-TQF est donc modifié en CO-TQF-FM ou CTF par gain de place</li>
+			<li>L'ajout d'une FM ce fait via l'élément vert. Le numéro se fait automatiquement selon le bâtiment et les éléments déjà existant</li>
+			<li>La montée d'indice d'une FM est selon le dernier indice du numéro de la FM. Il est impossible de monter l'indice A si le B existe</li>
+			<li>Dans la création d'action, il est possible de se mettre en pilote en cliquant sur la plume. Cela evite de chercher. Dispo dans d'autres onglet aussi</li>
+			<li>La numérotation des FM est identique avec celle des TQF : LBGN-2-AXI-FMO-xxyyyy-z</li>
+            <li>Le dernier import GED sur la BDD est désormais disponible dans l'onglet CO-TQF (idem que sur gestion des temps)</li>
+            <li>Un message de confirmation est désormais présent lorsqu'on quitte l'application</li>
+			<li>Il est désormais + simple de rechercher une typologie (CO, TQF et FM). Une liste de recherche est disponible</li>
+			<li>Il est possible de choisir des CO-TQF-FM en favoris</li>
+			<li>Il est possible de trier pour voir uniquement ces doc favoris</li>
+			<li>Le choix de favoris est possible lors de la création d'actions, pour CHR ou pour DOC</li>
+			<li>Les nouvelles CO-TQF se mettent automatiquement avec le commentaire "RAS"</li>
+			<li>Ajout d'un lien pour l'excel v2 (base de données complète v0.1) dans l'onglet CO-TQF-FM</li>
+        </ul>
+
+    </div>
+</details>
+
+<!-- ========================= VERSION 0.2 — 20/03/2026 ========================= -->
+<details>
+    <summary><span class="chevron">▸</span>VERSION 0.2 — 20/03/2026</summary>
+    <div class="content">
+        <p>Version PowerApps 124 (3.26032.12)</p>
+        <h3>Modifications</h3>
+        <ul>
+            <li>Bouton pour masquer/montrer l'onglet filtre bloqué dans l'onglet CO-TQF (car pas utile)</li>
+            <li>Ajouter un commentaire n'est plus obligatoire dans l'onglet CO-TQF</li>
+            <li>Liste de TQF mise à jour avec les bons statuts et mauvais indices supprimés</li>
+        </ul>
+
+        <h3>Ajouts</h3>
+        <ul>
+            <li>Possibilité de trier les CO et TQF sur les bâtiments (prise en compte sur le power automate aussi)</li>
+            <li>Ajout du statut périmé</li>
+            <li>Possibilité d'afficher ou non la deuxième ligne de chaque enregistrement de CO/TQF</li>
+            <li>Les TQF périmés ne se montrent pas nativement, il faudra cocher le bouton pour les montrer</li>
+        </ul>
+
+    </div>
+</details>
+
+<!-- ========================= VERSION 0.1.1 ========================= -->
+<details>
+    <summary><span class="chevron">▸</span>VERSION 0.1.1 — 13/03/2026</summary>
+    <div class="content">
+        <p>Version PowerApps 103 (3.26031.13)</p>
+        <h3>Modifications</h3>
+        <ul>
+            <li>Il est désormais possible de modifier le titre des actions</li>
+            <li>Suppression du bouton inutile</li>
+            <li>Modifications du panel filtre dans "CO et TQF"</li>
+        </ul>
+
+        <h3>Ajouts</h3>
+        <ul>
+            <li>Versioning ajouté</li>
+            <li>Accès possible à la nouvelle base de données complète</li>
+        </ul>
+
+        <h3>GED</h3>
+        <ul>
+            <li>Se référer à la patchnote de la gestion des temps (ne sera pas remis)</li>
+        </ul>
+    </div>
+</details>
+
+<!-- ========================= VERSION 0.1 ========================= -->
+<details>
+    <summary><span class="chevron">▸</span>VERSION 0.1 — 06/02/2026</summary>
+    <div class="content">
+        <p>Version PowerApps 98 (3.26014.7)</p>
+        <h3>Modifications</h3>
+        <ul>
+            <li>RAS</li>
+        </ul>
+
+        <h3>Ajouts</h3>
+        <ul>
+            <li>Création de l'application</li>
+        </ul>
+
+        <h3>GED</h3>
+        <ul>
+            <li>Se référer à la patchnote de la gestion des temps</li>
+        </ul>
+    </div>
+</details>
+
+</main>
+
+</body>
+</html>

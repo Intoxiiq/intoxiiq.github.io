@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestima → Nomenclatures - Patchnotes</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        try {
+            if (localStorage.getItem('equans-theme') === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+        } catch (e) {
+            // Ignoré : localStorage bloqué (iframe sandbox SharePoint)
+        }
+    </script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-left">
+        <img src="Logo_Axima_Concept_Equans.png" alt="Logo EQUANS" class="header-logo">
+        <h1 class="header-title">Gestima → Nomenclatures</h1>
+    </div>
+    <div class="header-right">
+        <button class="theme-toggle" type="button">🌙 Mode sombre</button>
+    </div>
+</header>
+
+<a href="index.html" class="back-link">← Retour à l'accueil</a>
+
+<main class="main">
+<h1>Notes de version</h1>
+<p class="version-info">Version actuelle : <strong>0.4</strong> — Publication : 22/04/2026</p>
+
+<!-- ========================= README ========================= -->
+<details>
+    <summary><span class="chevron">▸</span>README - 24/03/2026</summary>
+	<div class="content">
+		<p> En cours de rédaction </p>
+		<h3>FONCTIONNEMENT</h3>
+			<p>
+				Le but de ce code est de générer des nomenclatures depuis les éléments de GESTIMA, ainsi que de générer des import GESTIMA depuis des nomenclatures générées depuis cette application.
+				Pour cela, il faut :
+			</p>
+			<ul class="tabbed">
+				<li>Que ui.py et gestima_to_nm.py soient dans le même dossier</li>
+				<li>Que template_gestima.xlsx soit dans le dossier :\\d29.tes.local\NTE\AFFAIRES\NUC\T4R1A2601\12.QE\02_Outils\03_GESTIMA\999_-_Export_NM_GESTIMA. Si ce lien venait à changer (changement de nom de dossier ou de fichier), alors le code n'est pas fonctionnel</li>
+				<li>Le template_gestima.xlsx ne soit pas être modifié dans l'onglet "matrice_noms"</li>
+				<li>Des colonnes peuvent être ajoutés dans "matrice_noms", mais après celles existantes</li>
+				<li>Les critères spécifiques sont à rentrer à la suite dans l'onglet "matrice_noms" après les critères globaux</li>
+				<li>L'onglet "center" permet de dire ou non si les nomenclatures doivent centrer certains critères. Par défaut FALSE si non présent</li>
+				<li></li>
+			</ul>
+			
+		<h3>PRE REQUIS</h3>
+			<p>
+				Il y a 2 étapes : installer python et installer les modules python nécessaires.
+				(ETAPE 1) Il faut installer python via le portail d'entreprise (company portal) :
+			</p>
+			<ul>
+				<li>Chercher "Portail d'entreprise" dans la recherche windows
+				<li>Dans la barre de recherche en haut, taper "python" et appuyer sur "Entrer"
+				<li>Cliquer sur "Python 3.13 - Microsoft Stope App"
+				<li>Cliquer sur "Installer"
+				<li>L'installation prend entre 5 et 10 minutes
+				<break>
+				(ETAPE 2) Il faut installer les modules via le fichier .bat
+				<li>Aller dans le dossier \\d29.tes.local\NTE\AFFAIRES\NUC\T4R1A2601\12.QE\02_Outils\03_GESTIMA\999_-_Export_NM_GESTIMA\traitement_excel
+				<li>Double cliquer sur "install_libraries.bat"
+				<li>Cela installe les éléments nécessaire au traitement des données
+				<li>Cela n'est PAS un virus, malgré une ouverture de l'invité de commande
+				<li>Une fois terminé (environ 5 minutes max - le texte "Press any key to continue . . ." apparait), vous pouvez quitter l'invité de commande (soit la croix en haut à droite, soit en appuyant sur une touche du clavier, comme "A")
+				
+				L'application est désormais opérationelle.
+			</ul>
+			
+			<h3>UTILISATION</h3>
+				<p>
+				Toujours dans le répertoire \999_-_Export_NM_GESTIMA:
+				- Double cliquer sur ui.pyw
+				</p>
+			
+	</div>
+</details>
+
+<!-- ========================= VERSION 0.4 — 22/04/2026 ========================= -->
+<details open>
+    <summary><span class="chevron">▸</span>VERSION 0.4 — 22/04/2026</summary>
+    <div class="content">
+        <h3>Modifications</h3>
+        <ul>
+			<li>Lorsqu'on choisi "ALL" dans les familles, cela exporte toutes les familles disponibles du ou des bâtiments choisies</li>
+			<li>Les familles non présentes mais coché (ou quand ALL est coché) sont mentionné dans un message d'erreur (fenetre + .txt)</li>
+			<li>Il y a désormais un excel par bâtiment, et non pas un excel par export</li>
+			<li>L'interface apparait en haut a gauche d'un écran plutot que au milieu. Cela evite que la fenetre soit coupée</li>
+			<li>Gestion des batiments et familles modifiés. Le batiment (building) est obligatoire dans le template GESTIMA</li>
+			<li>Le template GESTIMA a une colonne supplémenatire pour spécifier a quel équipement appartient la ligne dans le cas des critères spécifiques</li>
+			<li>Cette nouvelle ligne a apporté quelques bugs, mais ceux-ci sont désormais corrigés</li>
+			<li>[05/05/2026] Modification pour les numéros de salles. Il faut utiliser "_" et non "-" comme séparation. Le cas échéant, une date sera automatiquement rentrée dans le CSV...</li>
+			<li></li>
+			<li></li>
+			<li></li>
+        </ul>
+		
+        <h3>Ajouts</h3>
+        <ul>
+            <li>Il est désormais possible de choisir un bâtiment. La liste est figée et devra être agrandie dans le temps</li>
+            <li>Il est possible de choisir "ALL" pour les bâtiment, permettant de choisir tous les bâtiments disponible dans la liste</li>
+			<li>Lorsqu'un bâtiment n'est pas présent dans l'excel de l'export, le fichier excel n'est pas généré pour ce batiment, et un message d'erreur apparait</li>
+			<li>Il est possible de montrer la PDG ou non. Le + simple est de ne pas la montrer car cela engendre quelques bugs</li>
+			<li>Après avoir chargé l'excel, il est possible de savoir ce qui est exportable par batiment en cliquant sur le bouton "Voir les données possibles"</li>
+			<li>Gestion des erreurs retravaillée</li>
+			<li>Un fichier .txt d'erreur apparait dans le dossier d'export si des erreurs ont été détécté (en + de la fenetre)</li>
+        </ul>
+
+    </div>
+</details>
+
+<!-- ========================= VERSION 0.3.1 — 20/03/2026 ========================= -->
+<details>
+    <summary><span class="chevron">▸</span>VERSION 0.3.1 — 20/03/2026</summary>
+    <div class="content">
+        <h3>Modifications</h3>
+        <ul>
+            <li>Modification de la donnée d'entrée du gabarit d'import, désormais dans le template excel</li>
+			<li>Correction du bug ne générant pas des valeurs pour l'import GESTIMA</li>
+			<li>Suppression des () et ajout des [] pour les unités des critères</li>
+			<li>Ajout du critère "depth" manquant</li>
+        </ul>
+    </div>
+</details>
+
+<!-- ========================= VERSION 0.3 - 12/03/2026 ========================= -->
+<details>
+    <summary><span class="chevron">▸</span>VERSION 0.3 — 12/03/2026</summary>
+    <div class="content">
+        <h3>Modifications</h3>
+        <ul>
+            <li>Modification de l'UI pour l'ajout de la zone NM -> GESTIMA</li>
+			<li>Refonte graphique de l'UI</li>
+        </ul>
+
+        <h3>Ajouts</h3>
+        <ul>
+            <li>RAS</li>
+        </ul>
+    </div>
+</details>
+
+<!-- ========================= VERSION 0.2 - 23/02/2026 ========================= -->
+<details>
+    <summary><span class="chevron">▸</span>VERSION 0.2 — 23/02/2026</summary>
+    <div class="content">
+        <h3>Modifications</h3>
+        <ul>
+            <li>Application désormais non buguée quand les équipements demandés ne sont pas dans la nomenclature exportée</li>
+        </ul>
+
+        <h3>Ajouts</h3>
+        <ul>
+            <li>RAS</li>
+        </ul>
+    </div>
+</details>
+
+<!-- ========================= VERSION 0.1 - 01/12/2025 ========================= -->
+<details>
+    <summary><span class="chevron">▸</span>VERSION 0.1 — 01/12/2025</summary>
+    <div class="content">
+        <h3>Modifications</h3>
+        <ul>
+            <li>RAS</li>
+        </ul>
+
+        <h3>Ajouts</h3>
+        <ul>
+            <li>Création de l'application</li>
+        </ul>
+    </div>
+</details>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Power Automate - Import GED - Patchnotes</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        try {
+            if (localStorage.getItem('equans-theme') === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+        } catch (e) {
+            // Ignoré : localStorage bloqué (iframe sandbox SharePoint)
+        }
+    </script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-left">
+        <img src="Logo_Axima_Concept_Equans.png" alt="Logo EQUANS" class="header-logo">
+        <h1 class="header-title">Power Automate - Import GED</h1>
+    </div>
+    <div class="header-right">
+        <button class="theme-toggle" type="button">🌙 Mode sombre</button>
+    </div>
+</header>
+
+<a href="index.html" class="back-link">← Retour à l'accueil</a>
+
+<main class="main">
+<h1>Notes de version</h1>
+<p class="version-info">Version actuelle : <strong>x.x</strong> - Publication : xx/xx/xxxx</p>
+
+<!-- ========================= PRINCIPE ========================= -->
+<details>
+	<summary><span class="chevron">▸</span>PRINCIPE - VERSION 0.1 - xx/xx/xxxx</summary>
+	<div class="content">
+        <h3>Liste des actions</h3>
+        <ul>
+			<li><h3>GENERAL</h3></li>
+			
+			<li>Manually trigger a flow : Permet de lancer l'application. Permet aussi de récupérer le CSV de la GED pour analyse et traitement (input user)</li>
+			<li>ComposeTimeIn : Permet de récupérer l'heure du début du process. Sert a la fin pour calculer le temps d'éxécution du flow</li>
+			<li>GetItemsA02 : Permet d'avoir la liste des utilisateurs LABGENE</li>
+			<li>SelectA02 : Permet d'avoir un array type {gaia: nom}</li>
+			<li>JoinA02 : On prépare l'export au format JSON afin d'avoir un vrai dicitonnaire</li>
+			<li>ComposeA02json : On compose le dictionnaire JSON, permettant ainsi de faire des liens facile entre un numéro GAIA et un nom</li>
+			<li>ComposeCSV : Récupère les données du csv de la GED en un élément lisible pour power automate et le traitement de données</li>
+			<li>ComposeCSVTable : Transforme la ligne de données CSV en un tableau de 2 colonnes : l'ID et la grande ligne</li>
+			<li>ComposeHeader : Récupère les entêtes des colonnes</li>
+			<li>FilterArrayB01 : Permet d'avoir un tableau uniquement composé de document contractuels</li>
+			<li>SelectB01CSV : Permet de créer à l'échelle 1:1 les éléments présent dans B01, par simplicité.</li>
+			<li>FilterArrayB02 : Permet d'avoir uniquement les TQF et COR</li>
+			<li>SelectB02CSV : Permet de créer à l'échelle 1:1 les éléments présent dans B02, par simplicité.</li>
+			
+			<li><h3>RECUP BDD</h3></li>
+			
+			<li>GetItemsB01 : Permet de récupérer les élément de la BDD B01</li>
+			<li>SelectB01Quick : On fait une liste de type [] avec chaque tag complet de la BDD</li>
+			<li>SelectB01CSVQuick : On fait une liste de type [] avec chaque tag complet du CSV (donc traité au préalable avant)</li>
+			<li>FilterArrayPresentB01 : On check les élément du CSV non présent dans la BDD</li>
+			<li>SelectB01 : Permet de garder niquement l'ID et le tag afin de voir si celui-ci existe ou non en comparaison avec le CSV intégré</li>
+			<li>JoinB01 : Permet de joindre les éléments avec une, afin de faire un JSON</li>
+			<li>ComposeB01json : On le met au format JSON</li>
+			<li>FilterArrayB01New : On fait une query pour avoir les éléments non présent dans la BDD. Cela rend les "quick" obsolète. je garde pour le principe</li>
+			<li>ApplyToEachB01New : Loop sur chaque item nouveau du CSV non présentdans la BDD</li>
+			<ul><li>CreateItemB01 : Créé le nouvel item dans la BDD B01</li></ul>
+			<li>GetItemsB02 : Permet de récupérer les élément de la BDD B02</li>
+			<li>SelectB02 : Permet de garder niquement l'ID et le tag afin de voir si celui-ci existe ou non en comparaison avec le CSV intégré</li>
+			<li>JoinB02 : Permet de joindre les éléments avec une, afin de faire un JSON</li>
+			<li>ComposeB02json : On le met au format JSON</li>
+			<li>FilterArrayB02New : On fait une query pour avoir les éléments non présent dans la BDD
+			<li>ApplyToEachB02New : Loop sur chaque item nouveau du CSV non présentdans la BDD</li>
+			<ul><li>CreateItemB02 : Créé le nouvel item dans la BDD B02</li></ul>
+			
+			<li><h3>TOUCHE FINALE</h3></li>
+			
+			<li>ComposeTimeOut : Permet de connaitre l'heure de la fin d'éxecution</li>
+			<li>ComposeComputeTime : Prend les valeurs d'entrée et sortie de temps afin de calculer le temps d'execution</li>
+			<li>CreateItemA08 : Permet de sauvegarder le fait qu'un flow a été lancé a un moment donné</li>
+			<li>SendAnEmailV2 : Envoi un email a l'utilisateur et a moi pour savoir qu'un flow a été lancé</li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			
+		</ul>
+	</div>
+</details>
+
+<!-- ========================= VERSION 0.1 ========================= -->
+<details open>
+	<summary><span class="chevron">▸</span>VERSION 0.1 - xx/xx/xxxx</summary>
+	<div class="content">
+        <h3>Modifications</h3>
+        <ul>
+            <li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+
+        </ul>
+        <h3>Ajouts</h3>
+        <ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</details>
+
+</main>
+
+</body>
+</html>
