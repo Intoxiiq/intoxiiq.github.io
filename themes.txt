@@ -1,0 +1,133 @@
+ClearCollect(
+    col_theme_full;
+
+    // ===== Thème clair =====
+    {
+        // ==Name==
+        name: "clair";
+
+        // ==Border==
+        BorderColor: ColorFade(Color.DarkBlue;50%);
+
+        // ==Chevron==
+        ChevronBackground: ColorFade(Color.DarkBlue;50%);
+        ChevronFill: Color.Black;
+        ChevronHoverBackground: ColorFade(Color.DarkBlue;70%);
+        ChevronHoverFill: Color.Black;
+
+        // ==Text==
+        Color: Color.Black;
+        Font: Font.Arial;
+        Size: 10;
+        SizeTitre: 12;
+        SizeMenu: 15;
+        SizeHeader: 32;
+        FontWeight: FontWeight.Normal;
+
+        // ==Fill==
+        Fill: Color.White;
+        Fill_favoris_cyan: ColorFade(Color.DarkCyan;90%);
+        Fill_favoris_purple: ColorFade(Color.MediumPurple;85%);
+        Fill_logo_equans: Color.White;
+		Fill_verif_green: ColorFade(Color.Green;90%);
+        Fill_vue_temp: ColorFade(Color.DarkBlue;90%);
+        Fill_admin_true: ColorFade(Color.Green;80%);
+        Fill_admin_false: ColorFade(Color.Gray;80%);
+        Fill_productif: ColorFade(Color.Green;80%);
+        Fill_non_productif: ColorFade(Color.Orange;80%);
+        Fill_FM: ColorFade(Color.DimGray;80%);
+        
+        // ==Hover==
+        HoverBorderColor: ColorFade(Color.DarkBlue;70%);
+        HoverColor: Color.Black;
+        HoverFill: ColorFade(Color.DarkBlue;70%);
+
+        // ==Pressed==
+        PressedBorderColor: ColorFade(Color.DarkBlue;90%);
+        PressedColor: Color.Black;
+        PressedFill: ColorFade(Color.DarkBlue;90%);
+
+        // ==Selected==
+        SelectionColor: Color.Black;
+        SelectionFill: ColorFade(Color.DarkBlue;50%);
+        SelectionTagColor: Color.Black;
+        SelectionTagFill: Color.Transparent;
+
+        // ==Disabled==
+        DisabledColor: RGBA(225; 223; 221; 1);
+        DisabledFill: RGBA(0; 0; 0; 0);
+
+        // ==Error==
+        bsy_error_1: ColorFade(Color.Red;80%);
+        bsy_error_2: ColorFade(Color.Red;40%);
+
+        // ==Screen==
+        ScreenFill: ColorFade(Color.DimGray;95%) 
+    };
+    
+    // ===== Thème sombre =====
+    {
+        // ==Name==
+        name: "sombre";
+
+        // ==Border==
+        BorderColor: ColorFade(Color.DarkBlue; 30%);
+
+        // ==Chevron==
+        ChevronBackground: RGBA(30; 60; 120; 1);
+        ChevronFill: Color.White;
+        ChevronHoverBackground: RGBA(50; 95; 180; 1);
+        ChevronHoverFill: Color.White;
+
+        // ==Text==
+        Color: Color.White;
+        Color_2: Color.Black;
+        Font: Font.Arial;
+        Size: 10;
+        SizeTitre: 12;
+        SizeMenu: 15;
+        SizeHeader: 32;
+        FontWeight: FontWeight.Normal;
+
+        // ==Fill==
+        Fill: RGBA(40; 40; 40; 1); // cartes/inputs
+        Fill_favoris_cyan: ColorFade(Color.DarkCyan;10%);
+        Fill_favoris_purple: ColorFade(Color.MediumPurple;15%);
+        Fill_logo_equans: RGBA(90;90;90;1);
+		Fill_verif_green: ColorFade(Color.Green;10%);
+        Fill_vue_temp: ColorFade(Color.DarkTurquoise;-60%);
+        Fill_admin_true: ColorFade(Color.Green;-30%);
+        Fill_admin_false: ColorFade(Color.Gray;10%);
+        Fill_productif: ColorFade(Color.Green;20%);
+        Fill_non_productif: ColorFade(Color.Beige;-40%);
+        Fill_FM: Color.DimGray;
+
+        // ==Hover==
+        HoverBorderColor: RGBA(80; 130; 220; 1);
+        HoverColor: Color.White;
+        HoverFill: RGBA(50; 95; 180; 1);
+
+        // ==Pressed==
+        PressedBorderColor: RGBA(100; 160; 255; 1);
+        PressedColor: Color.White;
+        PressedFill: RGBA(35; 75; 140; 1);
+
+        // ==Selected==
+        SelectionColor: Color.White;
+        SelectionFill: RGBA(50; 95; 180; 1);
+        SelectionTagColor: Color.White;
+        SelectionTagFill: Color.Transparent;
+
+        // ==Disabled==
+        DisabledColor:Color.Black;
+        DisabledFill: RGBA(0; 0; 0; 0);
+
+        // ==Error==
+        bsy_error_1: ColorFade(Color.IndianRed;35%);
+        bsy_error_2: RGBA(255; 160; 160; 1);
+
+        // ==Screen==
+        ScreenFill: RGBA(18; 18; 18; 1)
+    }
+
+);;
